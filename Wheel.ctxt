@@ -1,0 +1,37 @@
+#BlueJ class context
+#Fri Sep 18 21:36:41 COT 2026
+comment0.target=Wheel
+comment0.text=\r\n  A frame of the wheels and the symbols we are going to use in the class SlotMachine\r\n \r\n @author ForeroJ - SamuelS\r\n
+comment1.params=sharedSymbols
+comment1.target=Wheel(java.util.List)
+comment1.text=\r\n Create a new wheel determining the position, creating a new objet of the class Rectangle and another of Circle.\r\n
+comment10.target=java.lang.String getActualColor()
+comment10.text=\r\n Return the color this wheel is currently showing.\r\n @return the current color of the wheel.\r\n
+comment11.params=wheel2
+comment11.target=void swapSymbols(Wheel)
+comment11.text=\r\n Exchange the current color of this wheel with the current color of another wheel.\r\n @param wheel2 the other wheel to swap colors with.\r\n
+comment12.target=void lock()
+comment12.text=\r\n Lock this wheel so its color stays fixed and does not change on future spins, symbol swaps, or specific color changes.\r\n
+comment13.target=void unlock()
+comment13.text=\r\n Unlock this wheel so its color can change again on future spins,symbol swaps, or specific color changes.\r\n
+comment14.target=boolean isLocked()
+comment14.text=\r\n Indicates whether this wheel is currently locked.\r\n @return true if the wheel is locked, false otherwise.\r\n
+comment2.target=void showWheels()
+comment2.text=\r\n        Make this wheel visible, with an specific size.\r\n
+comment3.params=color
+comment3.target=void showSymbol(java.lang.String)
+comment3.text=\r\n Make this symbol visible, with color put by the user.\r\n @param color the new color. Valid colors are "red", "magenta", "yellow", "green", "black", "blue", "white",\r\n "magenta" and "black".\r\n
+comment4.params=distance
+comment4.target=void moveHorizontalWheel(int)
+comment4.text=\r\n Move the wheelframe and the symbol to a set distance\r\n @param distance the desired distance in pixels\r\n
+comment5.target=void makeInvisible()
+comment5.text=\r\n        Make the wheelframe and the symbol invisible.\r\n
+comment6.target=void hideSymbol()
+comment6.text=\r\n        Make just the simbol invisible.\r\n
+comment7.target=void changeColorSymbol()
+comment7.text=\r\n Change the symbol color randomly choosing ONLY from the available colors in 'symbols'.\r\n
+comment8.target=java.lang.String[] getSymbols()
+comment9.params=color
+comment9.target=void changeSpecificColor(java.lang.String)
+comment9.text=\r\n Change the symbol color in a specific way.\r\n @param color the new color. Valid colors are "red", "magenta", "yellow", "green", "black", "blue", "white",\r\n "magenta" and "black".\r\n
+numComments=15

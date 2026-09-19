@@ -1,0 +1,27 @@
+#BlueJ class context
+#Fri Sep 18 22:24:55 COT 2026
+comment0.target=SlotMachineCC2Test
+comment0.text=\r\n Test class for validating the behavior, methods, and error handling of the swap method in SlotMachine.\r\n @author DOPO \r\n @version 1.0\r\n
+comment1.target=void setUp()
+comment1.text=\r\n Sets up the test fixture.\r\n\r\n Called before every test case method.\r\n
+comment10.target=void accordingCaPpShouldNotSwapWhenWheelIsLockedAndWorkWhenUnlocked()
+comment10.text=\r\n Verifica el intercambio entre ruedas bloqueadas y desbloqueadas,\r\n y la rotaci\u00F3n de una rueda por pasos.\r\n
+comment11.target=void accordingCxLxShouldAdvanceToNextSymbol()
+comment11.text=\r\n Verifies that spinning a wheel advances it to the next symbol\r\n in the machine's symbol list.\r\n
+comment12.target=void accordingCxLxShouldNotDeleteMissingSymbol()
+comment12.text=\r\n Verifies that deleting a symbol that is not in the machine fails\r\n and leaves the symbol list unchanged.\r\n
+comment2.target=void shouldNotSwap()
+comment2.text=\r\n Verifies that attempting to swap two wheels fails when one of\r\n them is locked, setting the machine status to not ok.\r\n
+comment3.target=void accordingBaGqShouldLockWheel()
+comment3.text=\ Prueba que una rueda existente pueda ser bloqueada correctamente.\r\n La maquina debe permitir bloquear una rueda que existe.\r\n La operacion debe realizarse correctamente y ok() debe retornar true.\r\n
+comment4.target=void accordingCgHnIsJackpotShouldBeFalseWithOnlyOneWheelEvenIfSymbolIsSet()
+comment4.text=\r\n A single wheel should never trigger a jackpot even if it already has a symbol placed\r\n
+comment5.target=void accordingCgHnAddSymbolShouldFailWhenColorAlreadyExists()
+comment5.text=Adding a color that already exists on a wheel should fail
+comment6.target=void accordingClPcShouldKeepDistinctSymbolCountAfterSwap()
+comment7.target=void accordingClPcShouldNotReportJackpotWhenSetConfigurationDiffers()
+comment8.target=void swapShouldExchangeWheels()
+comment8.text=Prueba que se puedan intercambiar dos ruedas
+comment9.target=void lockedWheelShouldNotSpin()
+comment9.text=Una rueda fijada no debe girar
+numComments=13

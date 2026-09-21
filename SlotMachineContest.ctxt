@@ -1,5 +1,5 @@
 #BlueJ class context
-#Fri Sep 18 23:01:46 COT 2026
+#Sun Sep 20 22:22:18 COT 2026
 comment0.target=SlotMachineContest
 comment0.text=\r\n This class try to win the SlotMachine game by itself, spinning the\r\n wheels until all of them show the same symbol.\r\n \r\n @author ForeroJ - SalinasS\r\n
 comment1.params=n
@@ -7,5 +7,5 @@ comment1.target=int[][] solve(int)
 comment1.text=\r\n Try to solve the game\: create a new machine and spin the wheels one by one until it wins (or almost). This method is used just for test the algorithm, so the machine stays invisible.\r\n @param n the number of wheels of the machine.\r\n @return an array with how many steps each wheel needed.\r\n
 comment2.params=n
 comment2.target=void simulate(int)
-comment2.text=\r\n     Simulate the game like a real player would see it\: this time the machine is visible, so you can watch the wheels spinning until it wins the jackpot.\r\n @param n the number of wheels of the machine.\r\n
+comment2.text=\r\n Simulate the game like a real player would see it\: this time themachine is visible, so you can watch the wheels spinning until it wins the jackpot.\r\n @param n the number of wheels of the machine.\r\n
 numComments=3

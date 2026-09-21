@@ -1,0 +1,15 @@
+#BlueJ class context
+#Sun Sep 20 22:26:33 COT 2026
+comment0.target=SlotMachineContestCTest
+comment0.text=\r\n Test class for validating the behavior of SlotMachineContest.\r\n @author Samuel Salinas - Juan David Forero\r\n
+comment1.target=void setUp()
+comment1.text=\r\n Sets up the test fixture.\r\n Called before every test case method.\r\n
+comment2.target=void accordingCcGbShouldtestSolveNumberOfMovements()
+comment2.text=\r\n Verifies that solve returns\r\n the expected number of movements.\r\n
+comment3.target=void accordingCjMcShouldCreateEqualWheelsAndSymbolsPerWheel()
+comment3.text=\r\n Verifica que SlotMachine(n) crea exactamente n ruedas, cada una\r\n con n s\u00EDmbolos montados\r\n
+comment4.target=void accordingCjMcShouldProposeAtMostOneActionPerValidWheel()
+comment4.text=\r\n Verifica que solve(n) nunca propone m\u00E1s acciones que ruedas existen\r\n en la m\u00E1quina, y que cada acci\u00F3n referencia una rueda dentro de un\r\n rango v\u00E1lido (1 a n).\r\n
+comment5.target=void accordingCaPpshouldReturnValidMovesStructure()
+comment6.target=void accordingCaPpshouldRunSimulationWithoutErrors()
+numComments=7

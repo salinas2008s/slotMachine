@@ -1,0 +1,15 @@
+#BlueJ class context
+#Sun Sep 20 22:24:40 COT 2026
+comment0.target=SlotMachineContestTest
+comment0.text=\r\n Test class for validating the behavior of SlotMachineContest.\r\n @author Samuel Salinas - Juan David Forero\r\n
+comment1.target=void setUp()
+comment1.text=\r\n Sets up the test fixture.\r\n Called before every test case method.\r\n
+comment2.target=void shouldReturnOneRowPerWheel()
+comment2.text=\r\n Tests that solve returns one row of steps per wheel.\r\n
+comment3.target=void shouldStepBeCorrect()
+comment3.text=\r\n Tests that the step counter of every wheel stays correct, no less than 0 and no more that the total of steps.\r\n
+comment4.target=void shouldWorkforEveryWhee()
+comment4.text=\r\n Tests that solve keeps returning the right amount of rows for several different machine sizes, not just one lucky case.\r\n
+comment5.target=void shouldntSolveNegativeWheels()
+comment5.text=\r\n Tests that n cant be a negative number.\r\n
+numComments=6

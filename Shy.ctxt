@@ -1,0 +1,8 @@
+#BlueJ class context
+#Sun Oct 04 11:25:16 COT 2026
+comment0.target=Shy
+comment1.params=color
+comment1.target=Shy(java.lang.String)
+comment2.params=circle
+comment2.target=void symbolWeWant(Circle)
+numComments=3

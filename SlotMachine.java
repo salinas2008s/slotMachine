@@ -15,10 +15,11 @@ public class SlotMachine
     private int xPos;
     private int yPos;
     private List<Wheel> wheels;
-    private Rectangle rectMachine;
+    private Fondo rectMachine;
     private boolean enJuego;
     private int count;
     private List<String> commonSymbols;
+    private List<String> symbolTypes = new ArrayList<>();
     
     /**
      * Create a new slot machine determining the position, starting with 3 wheels and with a black color.
@@ -29,11 +30,12 @@ public class SlotMachine
         xPos = 160;
         yPos = 30;
         wheels = new ArrayList<>(0);
-        rectMachine = new Rectangle();
+        rectMachine = new Fondo();
         enJuego=true;
         count = 0;
         commonSymbols = new ArrayList<>();
         commonSymbols.add("black");
+        symbolTypes.add("Normal");
         
         rectMachine.changeSize(xPos,yPos);
         rectMachine.changeColor("black");
@@ -46,7 +48,7 @@ public class SlotMachine
         xPos = 160;
         yPos = 30;
         wheels = new ArrayList<>();
-        rectMachine = new Rectangle();
+        rectMachine = new Fondo();
         enJuego = true;
         count = 0;
         commonSymbols = new ArrayList<>();
@@ -54,15 +56,16 @@ public class SlotMachine
         String[] validColors = {"red", "magenta", "yellow", "green", "black", "blue", "white"};
     
         for (int i = 0; i < n; i++) {
-            int randomSymbols = (int) (Math.random() * validColors.length);
-            commonSymbols.add(validColors[randomSymbols]);
+        int randomSymbols = (int) (Math.random() * validColors.length);
+        commonSymbols.add(validColors[randomSymbols]);
+        symbolTypes.add("Normal");
         }
     
         rectMachine.changeSize(xPos, yPos);
         rectMachine.changeColor("black");
 
         for (int i = 0; i < n; i++) {
-            Wheel newWheel = new Wheel(commonSymbols);
+            Wheel newWheel = new Wheel(commonSymbols, symbolTypes);
             newWheel.moveHorizontalWheel(i * 80);
             wheels.add(newWheel);
             yPos += 80;
@@ -77,6 +80,7 @@ public class SlotMachine
                 ok = true;
             }
         }
+        updateLeftWheel();
     }
     /**
         Create another wheel at the last of list.
@@ -85,7 +89,7 @@ public class SlotMachine
  
     public void addWheel(int pos) {
         if (wheels.size() < 18) {
-            Wheel newWheel = new Wheel(commonSymbols);
+            Wheel newWheel = new Wheel(commonSymbols, symbolTypes);
             int positionWheel;
             if (pos >= 1 && pos <= wheels.size() + 1) {
                 positionWheel = pos - 1;
@@ -101,6 +105,7 @@ public class SlotMachine
                     newWheel.showWheels();
                 }
                 makeBigRectMachine();
+                updateLeftWheel();
                 ok = true;
             } else {
                 ok = false;
@@ -115,19 +120,19 @@ public class SlotMachine
      * @param pos is the position on the array of the wheel we want to eliminate.
      */
     public void delWheel(int pos) {
-        if(pos >= 1){
-            wheels.get(pos - 1).makeInvisible();
-            wheels.remove(pos - 1);
-        
-            for (int i = pos - 1; i < wheels.size(); i++) {
-                wheels.get(i).moveHorizontalWheel(-80); 
-            }   
-            ok = true;
-            makeSmallRectMachine();
-        }else{
-            ok = false;
-        }
-        
+        if(pos >= 1 && wheels.get(pos-1).canDeleteWheel()){
+                wheels.get(pos - 1).makeInvisible();
+                wheels.remove(pos - 1);
+            
+                for (int i = pos - 1; i < wheels.size(); i++) {
+                    wheels.get(i).moveHorizontalWheel(-80); 
+                }   
+                ok = true;
+                updateLeftWheel();
+                makeSmallRectMachine();
+            }else{
+                ok = false;
+            }
     }   
     
     /**
@@ -198,6 +203,7 @@ public class SlotMachine
                 String randomColor = commonSymbols.get(randomIndex);
                 w.changeSpecificColor(randomColor);
                 ok = true;
+                rectMachine.pullLever();
             }
         }
         
@@ -211,6 +217,7 @@ public class SlotMachine
         if (wheel > 0 && wheel <= wheels.size()) {
             wheels.get(wheel - 1).changeColorSymbol();
             ok=true;
+            rectMachine.pullLever();
         } else{
             ok=false;
         }
@@ -389,10 +396,13 @@ public class SlotMachine
      * @throws InterruptedException if the pause between steps is interrupted.
      */
     public void spin(int wheel, int step) throws InterruptedException {
-        if (wheel > 0 && wheel <= wheels.size()) { //Acá nos aseguramos que la rueda exista.
-            for(int i= 0; i<step; i++){ //Y en este for hacemos que por cada paso, que se cambie de color la ruda.
+        if (wheel > 0 && wheel <= wheels.size()) {
+            for (int i = 0; i < step; i++) {
                 wheels.get(wheel - 1).changeColorSymbol();
-                    Thread.sleep(400);//Acá preguntamos a la IA que podríamos hacer para que hubierse un tiempo de espera que lo hiciera muy visible y nos dijo esa función
+                if (isVisible) {
+                    Thread.sleep(400);
+                }
+                rectMachine.pullLever();
             } 
             isJackpot();
         }else{
@@ -407,10 +417,91 @@ public class SlotMachine
         for(int i=0; i<wheels.size(); i++){
             if (Arrays.asList("red", "magenta", "yellow", "green", "black", "blue", "white").contains(setSymbols[i])) {
                 wheels.get(i).changeSpecificColor(setSymbols[i]);
+                rectMachine.pullLever();
             } else {
             ok = false;
             } 
         }
     }
+    
+    
+    //Ciclo 4: 
+    
+    public void updateLeftWheel(){
+        Wheel leftw;
+        for (int i=0; i<wheels.size(); i++){
+            if(i>0){
+                leftw = wheels.get(i-1);
+            } else{
+                leftw = null;
+            }
+            wheels.get(i).putLeftWheel(leftw);
+        }
+    }
+    
+    public void addWheel(String type, int pos) {
+        if (type.equals("Lefty") || type.equals("Rebel") || type.equals("Normal") || type.equals("Skipper")) {
+    
+            if (wheels.size() < 18) {
+                Wheel newWheel;
+                if (type.equals("Lefty")) {
+                    newWheel = new Lefty(commonSymbols, symbolTypes);
+                } else if (type.equals("Rebel")) {
+                    newWheel = new Rebel(commonSymbols, symbolTypes);
+                } else if (type.equals("Skipper")) {
+                    newWheel = new Skipper(commonSymbols, symbolTypes);
+                } else {
+                    newWheel = new Wheel(commonSymbols, symbolTypes);
+                }
+    
+                int positionWheel;
+                if (pos >= 1 && pos <= wheels.size() + 1) {
+                    positionWheel = pos - 1;
+    
+                    wheels.add(positionWheel, newWheel);
+                    newWheel.moveHorizontalWheel(positionWheel * 80);
+    
+                    for (int i = positionWheel + 1; i < wheels.size(); i++) {
+                        wheels.get(i).moveHorizontalWheel(80);
+                    }
+    
+                    if (isVisible) {
+                        newWheel.showWheels();
+                    }
+                    makeBigRectMachine();
+                    updateLeftWheel(); 
+                    newWheel.changeColorSymbol();
+                    ok = true;
+                } else {
+                    ok = false;
+                }
+            } else {
+                ok = false;
+            }
+    
+        } else {
+            ok = false; 
+        }
+    }
+    
+    public void addSymbol(String type, int pos, String color) {
+        if (type.equals("Normal") || type.equals("Ephemeral") || type.equals("Shy")) {
+            if (Arrays.asList("red", "magenta", "yellow", "green", "black", "blue", "white").contains(color)) {
+                if (pos >= 1 && pos <= commonSymbols.size() + 1) {
+                    commonSymbols.add(pos - 1, color);
+                    symbolTypes.add(pos - 1, type);
+                    ok = true;
+                } else {
+                    ok = false;
+                }
+            } else {
+                if (isVisible) {
+                    JOptionPane.showMessageDialog(null, "ONLY THESE COLORS TO THE SYMBOLS: red, black, green, magenta, yellow, blue and white");
+                }
+                ok = false;
+            }
+        } else {
+            ok = false;
+        }
+    }
 }
- 

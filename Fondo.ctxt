@@ -1,0 +1,16 @@
+#BlueJ class context
+#Sun Oct 04 10:39:02 COT 2026
+comment0.target=Fondo
+comment1.target=Fondo()
+comment2.params=width
+comment2.target=int desiredLightCount(int)
+comment3.params=width
+comment3.target=void updateLights(int)
+comment4.target=void makeVisible()
+comment5.target=void makeInvisible()
+comment6.params=newHeight newWidth
+comment6.target=void changeSize(int, int)
+comment7.params=newColor
+comment7.target=void changeColor(java.lang.String)
+comment8.target=void pullLever()
+numComments=9

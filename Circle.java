@@ -12,7 +12,7 @@ public class Circle{
 
     public static final double PI=3.1416;
     
-    private final int diameter;
+    private int diameter;
     private int xPosition;
     private int yPosition;
     private String color;
@@ -26,14 +26,11 @@ public class Circle{
         color = "blue";
         isVisible = false;
     }
-
-
        
     public void makeVisible(){
         isVisible = true;
         draw();
     }
-    
 
     public void makeInvisible(){
         erase();
@@ -147,9 +144,16 @@ public class Circle{
 
     /**
      * Change the size.
-     * @param newDiameter the new size (in pixels). Size must be >=0.
+     * @param newDiameter the new size (in pixels). Size must be >= 0.
      */
-
+    public void changeSize(int newDiameter) {
+        if (newDiameter >= 0) {
+            erase();
+            diameter = newDiameter;
+            draw();
+        }
+    }
+    
     /**
      * Change the color. 
      * @param color the new color. Valid colors are "red", "yellow", "blue", "green",
@@ -160,6 +164,11 @@ public class Circle{
         draw();
     }
 
-
-
+    public int getDiameter() {
+    return diameter;
+    }
+    
+    public boolean isVisible() {
+    return isVisible;
+    }
 }

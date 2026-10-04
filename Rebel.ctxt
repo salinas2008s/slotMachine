@@ -1,0 +1,9 @@
+#BlueJ class context
+#Sun Oct 04 13:09:17 COT 2026
+comment0.target=Rebel
+comment1.params=sharedSymbols sharedSymbolTypes
+comment1.target=Rebel(java.util.List, java.util.List)
+comment2.target=void lock()
+comment3.target=boolean isLocked()
+comment4.target=boolean canDeleteWheel()
+numComments=5

@@ -1,0 +1,9 @@
+#BlueJ class context
+#Sun Oct 04 11:25:08 COT 2026
+comment0.target=Symbol
+comment1.params=color
+comment1.target=Symbol(java.lang.String)
+comment2.target=java.lang.String getColor()
+comment3.params=circle
+comment3.target=void symbolWeWant(Circle)
+numComments=4

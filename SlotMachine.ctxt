@@ -1,5 +1,5 @@
 #BlueJ class context
-#Fri Sep 18 22:24:48 COT 2026
+#Sun Oct 04 13:14:50 COT 2026
 comment0.target=SlotMachine
 comment0.text=\r\n A slot machine able to game and realise a lot of method.\r\n \r\n @author ForeroJ - SalinasS \r\n
 comment1.target=SlotMachine()
@@ -41,6 +41,11 @@ comment23.text=\r\n Spin a specific wheel a given number of steps, pausing brief
 comment24.params=setSymbols
 comment24.target=void spin(java.lang.String[])
 comment24.text=\r\n Spin every wheel of the machine, setting each one to the color given at the matching position in setSymbols. \r\n @param setSymbols an array with one color per wheel, in wheel order.\r\n
+comment25.target=void updateLeftWheel()
+comment26.params=type pos
+comment26.target=void addWheel(java.lang.String, int)
+comment27.params=type pos color
+comment27.target=void addSymbol(java.lang.String, int, java.lang.String)
 comment3.params=pos
 comment3.target=void addWheel(int)
 comment3.text=\r\n        Create another wheel at the last of list.\r\n        @param pos is the position on the array of the wheel we want to adition.\r\n
@@ -61,4 +66,4 @@ comment8.text=\r\n Spin all the wheels of the machine, choosing a random color f
 comment9.params=wheel
 comment9.target=void spin(int)
 comment9.text=\r\n Spin an specific wheels of the machine. The color is aleatory.\r\n @param wheel the position of the wheel we want to spin.\r\n
-numComments=25
+numComments=28

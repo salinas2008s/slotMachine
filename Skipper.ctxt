@@ -1,0 +1,7 @@
+#BlueJ class context
+#Sun Oct 04 13:14:47 COT 2026
+comment0.target=Skipper
+comment1.params=sharedSymbols sharedSymbolTypes
+comment1.target=Skipper(java.util.List, java.util.List)
+comment2.target=void changeColorSymbol()
+numComments=3

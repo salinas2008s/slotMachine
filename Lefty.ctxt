@@ -1,0 +1,9 @@
+#BlueJ class context
+#Sun Oct 04 13:09:17 COT 2026
+comment0.target=Lefty
+comment1.params=sharedSymbols sharedSymbolTypes
+comment1.target=Lefty(java.util.List, java.util.List)
+comment2.target=void changeColorSymbol()
+comment3.params=color
+comment3.target=void changeSpecificColor(java.lang.String)
+numComments=4

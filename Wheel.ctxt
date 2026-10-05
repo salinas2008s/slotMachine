@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sun Oct 04 13:09:17 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=Wheel
 comment0.text=\r\n  A frame of the wheels and the symbols we are going to use in the class SlotMachine\r\n\r\n @author ForeroJ - SamuelS\r\n
 comment1.params=sharedSymbols sharedSymbolTypes
@@ -23,8 +23,12 @@ comment17.params=position
 comment17.target=void applyHerency(int)
 comment18.params=color
 comment18.target=void setFrameColor(java.lang.String)
+comment19.target=boolean isSymbolVisible()
+comment19.text=\r\n Indicates whether the symbol currently shown by this wheel is visible.\r\n @return true if the symbol circle is visible, false otherwise.\r\n
 comment2.target=void showWheels()
 comment2.text=\r\n        Make this wheel visible, with an specific size.\r\n
+comment20.target=int getSymbolDiameter()
+comment20.text=\r\n Return the diameter of the symbol currently shown by this wheel.\r\n @return the diameter of the symbol circle in pixels.\r\n
 comment3.params=color
 comment3.target=void showSymbol(java.lang.String)
 comment3.text=\r\n Make this symbol visible, with color put by the user.\r\n @param color the new color. Valid colors are "red", "magenta", "yellow", "green", "black", "blue", "white",\r\n "magenta" and "black".\r\n
@@ -41,4 +45,4 @@ comment8.target=java.lang.String[] getSymbols()
 comment9.params=color
 comment9.target=void changeSpecificColor(java.lang.String)
 comment9.text=\r\n Change the symbol color in a specific way.\r\n @param color the new color. Valid colors are "red", "magenta", "yellow", "green", "black", "blue", "white",\r\n "magenta" and "black".\r\n
-numComments=19
+numComments=21

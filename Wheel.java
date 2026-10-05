@@ -227,4 +227,20 @@ public class Wheel{
     protected void setFrameColor(String color) {
         wheelFrame.changeColor(color);
     }
+    
+    /**
+     * Indicates whether the symbol currently shown by this wheel is visible.
+     * @return true if the symbol circle is visible, false otherwise.
+     */
+    public boolean isSymbolVisible() {
+        return visibleSymbol.isVisible();
+    }
+    
+    /**
+     * Return the diameter of the symbol currently shown by this wheel.
+     * @return the diameter of the symbol circle in pixels.
+     */
+    public int getSymbolDiameter() {
+        return visibleSymbol.getDiameter();
+    }
 }

@@ -1,8 +1,11 @@
 #BlueJ class context
-#Sun Oct 04 11:25:16 COT 2026
+#Sun Oct 04 20:36:50 COT 2026
 comment0.target=Ephemeral
+comment0.text=\r\n A symbol that shrinks every time it is selected on a wheel,\r\n until it becomes a dot.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=color
 comment1.target=Ephemeral(java.lang.String)
+comment1.text=\r\n Create a new ephemeral symbol with the given color.\r\n @param color the color of the symbol.\r\n
 comment2.params=circle
 comment2.target=void symbolWeWant(Circle)
+comment2.text=\r\n Decrease the diameter of the given circle by 10 pixels.\r\n The diameter never goes below 2 pixels, which is the size of a dot.\r\n @param circle the circle that represents the symbol on the wheel.\r\n
 numComments=3

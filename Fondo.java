@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Fondo {
-
     private int LIGHT_SPACING = 25;
     private int LIGHT_DIAMETER = 8;
     private Rectangle body;

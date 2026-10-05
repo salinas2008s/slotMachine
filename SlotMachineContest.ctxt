@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sun Oct 04 13:14:50 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=SlotMachineContest
 comment0.text=\r\n\r\n This class try to win the SlotMachine game by itself, spinning the\r\n\r\n wheels until all of them show the same symbol.\r\n\r\n \r\n\r\n @author ForeroJ - SalinasS\r\n\r\n
 comment1.params=n

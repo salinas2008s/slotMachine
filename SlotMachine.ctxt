@@ -1,7 +1,7 @@
 #BlueJ class context
-#Sun Oct 04 13:14:50 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=SlotMachine
-comment0.text=\r\n A slot machine able to game and realise a lot of method.\r\n \r\n @author ForeroJ - SalinasS \r\n
+comment0.text=\r\n A slot machine able to game and realise a lot of m+ethod.\r\n \r\n @author ForeroJ - SalinasS \r\n
 comment1.target=SlotMachine()
 comment1.text=\r\n Create a new slot machine determining the position, starting with 3 wheels and with a black color.\r\n
 comment10.target=java.lang.String[] symbols()
@@ -46,6 +46,12 @@ comment26.params=type pos
 comment26.target=void addWheel(java.lang.String, int)
 comment27.params=type pos color
 comment27.target=void addSymbol(java.lang.String, int, java.lang.String)
+comment28.params=wheel
+comment28.target=boolean isSymbolVisible(int)
+comment28.text=\r\n Indicates whether the symbol shown by a specific wheel is visible.\r\n @param wheel the position of the wheel to check.\r\n @return true if the symbol is visible, false if it is hidden or the wheel does not exist.\r\n
+comment29.params=wheel
+comment29.target=int symbolSize(int)
+comment29.text=\r\n Return the diameter of the symbol shown by a specific wheel.\r\n @param wheel the position of the wheel to check.\r\n @return the diameter in pixels, or -1 if the wheel does not exist.\r\n
 comment3.params=pos
 comment3.target=void addWheel(int)
 comment3.text=\r\n        Create another wheel at the last of list.\r\n        @param pos is the position on the array of the wheel we want to adition.\r\n
@@ -66,4 +72,4 @@ comment8.text=\r\n Spin all the wheels of the machine, choosing a random color f
 comment9.params=wheel
 comment9.target=void spin(int)
 comment9.text=\r\n Spin an specific wheels of the machine. The color is aleatory.\r\n @param wheel the position of the wheel we want to spin.\r\n
-numComments=28
+numComments=30

@@ -1,8 +1,11 @@
 #BlueJ class context
-#Sun Oct 04 11:25:16 COT 2026
+#Sun Oct 04 22:22:32 COT 2026
 comment0.target=Shy
+comment0.text=\r\n A symbol that toggles between visible and invisible\r\n every time it is selected on a wheel.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=color
 comment1.target=Shy(java.lang.String)
+comment1.text=\r\n Create a new shy symbol with the given color.\r\n @param color the color of the symbol.\r\n
 comment2.params=circle
 comment2.target=void symbolWeWant(Circle)
+comment2.text=\r\n Toggle the visibility of the given circle\: if it is visible it becomes invisible,\r\n and if it is invisible it becomes visible.\r\n @param circle the circle that represents the symbol on the wheel.\r\n
 numComments=3

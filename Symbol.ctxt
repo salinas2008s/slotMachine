@@ -1,9 +1,13 @@
 #BlueJ class context
-#Sun Oct 04 11:25:08 COT 2026
+#Sun Oct 04 20:36:28 COT 2026
 comment0.target=Symbol
+comment0.text=\r\n A symbol that can be shown by a wheel. This is the normal symbol\: it only has a color\r\n and does not modify the circle that represents it. Other types of symbols extend this class to add their own effect.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=color
 comment1.target=Symbol(java.lang.String)
+comment1.text=\r\n Create a new symbol with the given color.\r\n @param color the color of the symbol.\r\n
 comment2.target=java.lang.String getColor()
+comment2.text=\r\n Return the color of this symbol.\r\n @return the color of the symbol.\r\n
 comment3.params=circle
 comment3.target=void symbolWeWant(Circle)
+comment3.text=\r\n Apply the effect of this symbol to the circle shown on the wheel.\r\n A normal symbol has no effect; subclasses override this method to change the\r\n size or the visibility of the circle.\r\n @param circle the circle that represents the symbol on the wheel.\r\n
 numComments=4

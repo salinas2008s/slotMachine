@@ -1,9 +1,13 @@
 #BlueJ class context
-#Sun Oct 04 13:09:17 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=Lefty
+comment0.text=\r\n A wheel that copies the color of the wheel on its left when it spins.\r\n If there is no wheel on its left, it behaves like a normal wheel when a specific color\r\n is set, and it does not change when it spins.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=sharedSymbols sharedSymbolTypes
 comment1.target=Lefty(java.util.List, java.util.List)
+comment1.text=\r\n Create a new lefty wheel with a green frame.\r\n @param sharedSymbols the list of colors shared by all the wheels of the machine.\r\n @param sharedSymbolTypes the list of symbol types shared by all the wheels of the machine.\r\n
 comment2.target=void changeColorSymbol()
+comment2.text=\r\n Copy the current color of the wheel on the left.\r\n Nothing happens if this wheel is locked or if there is no wheel on its left.\r\n
 comment3.params=color
 comment3.target=void changeSpecificColor(java.lang.String)
+comment3.text=\r\n Change the color of this wheel. If there is a wheel on the left and this wheel is not\r\n locked, the given color is ignored and the color of the left wheel is copied instead.\r\n @param color the new color, used only when there is no wheel on the left.\r\n
 numComments=4

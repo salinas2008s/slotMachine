@@ -1,15 +1,15 @@
 #BlueJ class context
-#Sun Oct 04 13:14:50 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=SlotMachineContestTest
-comment0.text=\r\n Test class for validating the behavior of SlotMachineContest.\r\n @author Samuel Salinas - Juan David Forero\r\n
+comment0.text=\r\n Test class for validating the behavior of SlotMachineContest.\r\n The machines created by solve have random colors, so the tests check\r\n properties that must hold for any random result.\r\n @author Samuel Salinas - Juan David Forero\r\n
 comment1.target=void setUp()
 comment1.text=\r\n Sets up the test fixture.\r\n Called before every test case method.\r\n
 comment2.target=void shouldReturnOneRowPerWheel()
-comment2.text=\r\n Tests that solve returns one row of steps per wheel.\r\n
+comment2.text=\r\n Tests that solve returns one row of steps per wheel, and that every row\r\n holds a single value\: the steps of that wheel.\r\n
 comment3.target=void shouldStepBeCorrect()
-comment3.text=\r\n Tests that the step counter of every wheel stays correct, no less than 0 and no more that the total of steps.\r\n
+comment3.text=\r\n Tests that the step counter of every wheel stays correct, no less than 0 and no more than\r\n the number of wheels, and that the total of steps never exceeds n * n.\r\n
 comment4.target=void shouldWorkforEveryWhee()
-comment4.text=\r\n Tests that solve keeps returning the right amount of rows for several different machine sizes, not just one lucky case.\r\n
+comment4.text=\r\n Tests that solve keeps returning the right amount of rows for several different machine sizes,\r\n not just one lucky case, and that the steps of every wheel stay valid in all of them.\r\n
 comment5.target=void shouldntSolveNegativeWheels()
-comment5.text=\r\n Tests that n cant be a negative number.\r\n
+comment5.text=\r\n Tests that n cant be a negative number, and that the contest is still usable\r\n after the failure\: a later solve with a valid size works normally.\r\n
 numComments=6

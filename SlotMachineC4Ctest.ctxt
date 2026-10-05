@@ -1,0 +1,16 @@
+#BlueJ class context
+#Sun Oct 04 23:16:20 COT 2026
+comment0.target=SlotMachineC4Ctest
+comment0.text=\r\n Test class for validating the types of wheels (Normal, Lefty, Rebel, Skipper)\r\n and the types of symbols (Normal, Ephemeral, Shy) of the SlotMachine.\r\n
+comment1.target=void setUp()
+comment1.text=\r\n Sets up the test fixture.\r\n\r\n Called before every test case method.\r\n
+comment2.target=void shouldAddSymbolsOfEveryType()
+comment2.text=\r\n Verifica que se puedan agregar simbolos de los tres tipos.\r\n
+comment3.target=void shouldRebelWheelRefuseLockSwapAndDelete()
+comment3.text=\r\n Verifica que la rueda rebel no se deje bloquear, intercambiar\r\n ni eliminar, y que la maquina quede igual despues de intentarlo.\r\n
+comment4.target=void shouldSpinMachineWithEveryWheelAndSymbolType()
+comment4.text=\r\n Verifica que la maquina funcione con los tres tipos de rueda y los\r\n tres tipos de simbolo a la vez\: todos los giros son exitosos y la\r\n lefty copia siempre a la rueda de su izquierda.\r\n
+comment5.target=void acordingCaPpShouldNotSwapRebelWheel()
+comment5.text=\r\n GRUPO 6\r\n Ca\u00F1onA - PaezP\r\n
+comment6.target=void acordingCaPpShouldNotDeleteRebelWheelbutShouldDeleteNormalWheel()
+numComments=7

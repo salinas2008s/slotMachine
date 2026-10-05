@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 import java.util.Arrays;
  
 /**
- * A slot machine able to game and realise a lot of method.
+ * A slot machine able to game and realise a lot of m+ethod.
  * 
  * @author ForeroJ - SalinasS 
  */
@@ -228,9 +228,11 @@ public class SlotMachine
      * Return a list with all the actual colors of the slot machine.
      */
     public String[] symbols() {
-
-        return wheels.get(0).getSymbols();
-    }
+        if (!wheels.isEmpty()) {
+            return wheels.get(0).getSymbols();
+        }
+        return commonSymbols.toArray(new String[0]);
+    }   
     
     /**
      * Give an integer of  the number of  distinct colors.
@@ -440,15 +442,15 @@ public class SlotMachine
     }
     
     public void addWheel(String type, int pos) {
-        if (type.equals("Lefty") || type.equals("Rebel") || type.equals("Normal") || type.equals("Skipper")) {
+        if (type.equals("lefty") || type.equals("rebel") || type.equals("normal") || type.equals("skipper")) {
     
             if (wheels.size() < 18) {
                 Wheel newWheel;
-                if (type.equals("Lefty")) {
+                if (type.equals("lefty")) {
                     newWheel = new Lefty(commonSymbols, symbolTypes);
-                } else if (type.equals("Rebel")) {
+                } else if (type.equals("rebel")) {
                     newWheel = new Rebel(commonSymbols, symbolTypes);
-                } else if (type.equals("Skipper")) {
+                } else if (type.equals("skipper")) {
                     newWheel = new Skipper(commonSymbols, symbolTypes);
                 } else {
                     newWheel = new Wheel(commonSymbols, symbolTypes);
@@ -485,7 +487,7 @@ public class SlotMachine
     }
     
     public void addSymbol(String type, int pos, String color) {
-        if (type.equals("Normal") || type.equals("Ephemeral") || type.equals("Shy")) {
+        if (type.equals("normal") || type.equals("ephemeral") || type.equals("shy")) {
             if (Arrays.asList("red", "magenta", "yellow", "green", "black", "blue", "white").contains(color)) {
                 if (pos >= 1 && pos <= commonSymbols.size() + 1) {
                     commonSymbols.add(pos - 1, color);
@@ -503,5 +505,28 @@ public class SlotMachine
         } else {
             ok = false;
         }
+    }
+    /**
+     * Indicates whether the symbol shown by a specific wheel is visible.
+     * @param wheel the position of the wheel to check.
+     * @return true if the symbol is visible, false if it is hidden or the wheel does not exist.
+     */
+    public boolean isSymbolVisible(int wheel) {
+        if (wheel > 0 && wheel <= wheels.size()) {
+            return wheels.get(wheel - 1).isSymbolVisible();
+        }
+        return false;
+    }
+
+    /**
+     * Return the diameter of the symbol shown by a specific wheel.
+     * @param wheel the position of the wheel to check.
+     * @return the diameter in pixels, or -1 if the wheel does not exist.
+     */
+    public int symbolSize(int wheel) {
+        if (wheel > 0 && wheel <= wheels.size()) {
+            return wheels.get(wheel - 1).getSymbolDiameter();
+        }
+        return -1;
     }
 }

@@ -1,9 +1,14 @@
 #BlueJ class context
-#Sun Oct 04 13:09:17 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=Rebel
+comment0.text=\r\n A wheel that rebels against the rules of the machine\: it cannot be locked,\r\n swapped or deleted.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=sharedSymbols sharedSymbolTypes
 comment1.target=Rebel(java.util.List, java.util.List)
+comment1.text=\r\n Create a new rebel wheel with a red frame.\r\n @param sharedSymbols the list of colors shared by all the wheels of the machine.\r\n @param sharedSymbolTypes the list of symbol types shared by all the wheels of the machine.\r\n
 comment2.target=void lock()
+comment2.text=\r\n Do nothing\: a rebel wheel refuses to be locked.\r\n
 comment3.target=boolean isLocked()
+comment3.text=\r\n Indicates that this wheel is protected against swaps.\r\n @return always true, so the machine refuses to swap it.\r\n
 comment4.target=boolean canDeleteWheel()
+comment4.text=\r\n Indicates that this wheel cannot be deleted.\r\n @return always false.\r\n
 numComments=5

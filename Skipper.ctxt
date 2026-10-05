@@ -1,7 +1,10 @@
 #BlueJ class context
-#Sun Oct 04 13:14:47 COT 2026
+#Sun Oct 04 23:16:20 COT 2026
 comment0.target=Skipper
+comment0.text=\r\n A wheel that advances four symbols each time it spins,\r\n pausing briefly between each step.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=sharedSymbols sharedSymbolTypes
 comment1.target=Skipper(java.util.List, java.util.List)
+comment1.text=\r\n Create a new skipper wheel with a yellow frame.\r\n @param sharedSymbols the list of colors shared by all the wheels of the machine.\r\n @param sharedSymbolTypes the list of symbol types shared by all the wheels of the machine.\r\n
 comment2.target=void changeColorSymbol()
+comment2.text=\r\n Advance four symbols, waiting 300 milliseconds after each step.\r\n If the thread is interrupted during a pause, the interruption is preserved.\r\n
 numComments=3

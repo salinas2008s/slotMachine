@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sun Oct 04 20:36:28 COT 2026
+#Tue Oct 20 22:15:23 COT 2026
 comment0.target=Symbol
 comment0.text=\r\n A symbol that can be shown by a wheel. This is the normal symbol\: it only has a color\r\n and does not modify the circle that represents it. Other types of symbols extend this class to add their own effect.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=color

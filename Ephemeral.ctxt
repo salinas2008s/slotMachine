@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sun Oct 04 20:36:50 COT 2026
+#Tue Oct 20 22:15:23 COT 2026
 comment0.target=Ephemeral
 comment0.text=\r\n A symbol that shrinks every time it is selected on a wheel,\r\n until it becomes a dot.\r\n\r\n @author ForeroJ - SalinasS\r\n
 comment1.params=color

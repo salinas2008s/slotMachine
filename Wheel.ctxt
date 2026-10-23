@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sun Oct 04 23:16:20 COT 2026
+#Tue Oct 20 22:15:23 COT 2026
 comment0.target=Wheel
 comment0.text=\r\n  A frame of the wheels and the symbols we are going to use in the class SlotMachine\r\n\r\n @author ForeroJ - SamuelS\r\n
 comment1.params=sharedSymbols sharedSymbolTypes

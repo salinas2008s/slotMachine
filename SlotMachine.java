@@ -487,7 +487,7 @@ public class SlotMachine
     }
     
     public void addSymbol(String type, int pos, String color) {
-        if (type.equals("normal") || type.equals("ephemeral") || type.equals("shy")) {
+        if ( Arrays.asList("normal", "ephemeral", "shy").contains(type)){
             if (Arrays.asList("red", "magenta", "yellow", "green", "black", "blue", "white").contains(color)) {
                 if (pos >= 1 && pos <= commonSymbols.size() + 1) {
                     commonSymbols.add(pos - 1, color);

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Skipper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SlotMachine</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Skipper.java</span></div><h1>Skipper.java</h1><pre class="source lang-java linenums">import java.util.List;
+
+/**
+ * A wheel that advances four symbols each time it spins,
+ * pausing briefly between each step.
+ *
+ * @author ForeroJ - SalinasS
+ */
+public class Skipper extends Wheel {
+
+    /**
+     * Create a new skipper wheel with a yellow frame.
+     * @param sharedSymbols the list of colors shared by all the wheels of the machine.
+     * @param sharedSymbolTypes the list of symbol types shared by all the wheels of the machine.
+     */
+    public Skipper(List&lt;String&gt; sharedSymbols, List&lt;String&gt; sharedSymbolTypes) {
+<span class="fc" id="L17">        super(sharedSymbols, sharedSymbolTypes);</span>
+<span class="fc" id="L18">        setFrameColor(&quot;yellow&quot;);</span>
+<span class="fc" id="L19">    }</span>
+
+    /**
+     * Advance four symbols, waiting 300 milliseconds after each step.
+     * If the thread is interrupted during a pause, the interruption is preserved.
+     */
+    @Override
+    public void changeColorSymbol() {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (int i = 0; i &lt; 4; i++) {</span>
+<span class="fc" id="L28">            super.changeColorSymbol();</span>
+            try {
+<span class="fc" id="L30">                Thread.sleep(300);</span>
+<span class="nc" id="L31">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L32">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L33">            }</span>
+        }
+<span class="fc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

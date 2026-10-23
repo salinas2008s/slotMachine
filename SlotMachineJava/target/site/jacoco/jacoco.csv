@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+SlotMachine,default,Circle,0,180,0,14,0,64,0,24,0,17
+SlotMachine,default,Wheel,57,289,12,24,17,81,13,25,3,17
+SlotMachine,default,Rebel,0,13,0,0,0,6,0,4,0,4
+SlotMachine,default,Shy,0,13,0,2,0,6,0,3,0,2
+SlotMachine,default,Symbol,3,7,0,0,1,4,1,2,1,2
+SlotMachine,default,Canvas,28,243,6,14,7,57,4,15,0,9
+SlotMachine,default,Rectangle,0,177,0,12,0,64,0,22,0,16
+SlotMachine,default,Skipper,3,21,0,2,2,8,0,3,0,2
+SlotMachine,default,SlotMachine,134,1235,39,119,39,221,36,72,2,27
+SlotMachine,default,Canvas.CanvasPane,0,16,0,0,0,3,0,2,0,2
+SlotMachine,default,Lefty,3,33,3,5,1,9,3,4,0,3
+SlotMachine,default,SlotMachineContest,14,85,1,9,5,20,2,6,1,2
+SlotMachine,default,Canvas.ShapeDescription,0,26,0,0,0,8,0,2,0,2
+SlotMachine,default,Ephemeral,2,18,1,1,1,7,1,2,0,2
+SlotMachine,default,Fondo,63,292,5,9,22,76,5,10,1,7

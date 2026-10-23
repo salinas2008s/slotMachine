@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Symbol.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SlotMachine</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Symbol.java</span></div><h1>Symbol.java</h1><pre class="source lang-java linenums">/**
+ * A symbol that can be shown by a wheel. This is the normal symbol: it only has a color
+ * and does not modify the circle that represents it. Other types of symbols extend this class to add their own effect.
+ *
+ * @author ForeroJ - SalinasS
+ */
+public class Symbol {
+    protected String color;
+
+    /**
+     * Create a new symbol with the given color.
+     * @param color the color of the symbol.
+     */
+<span class="fc" id="L14">    public Symbol(String color) {</span>
+<span class="fc" id="L15">        this.color = color;</span>
+<span class="fc" id="L16">    }</span>
+
+    /**
+     * Return the color of this symbol.
+     * @return the color of the symbol.
+     */
+    public String getColor() {
+<span class="nc" id="L23">        return color;</span>
+    }
+
+    /**
+     * Apply the effect of this symbol to the circle shown on the wheel.
+     * A normal symbol has no effect; subclasses override this method to change the
+     * size or the visibility of the circle.
+     * @param circle the circle that represents the symbol on the wheel.
+     */
+    public void symbolWeWant(Circle circle) {
+<span class="fc" id="L33">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

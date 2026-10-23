@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd xmlns="https://pmd-code.org/schema/cpd-report"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         pmdVersion="7.7.0"
+         timestamp="2026-10-22T01:28:22.7895844-05:00"
+         version="1.0.0"
+         xsi:schemaLocation="https://pmd-code.org/schema/cpd-report https://pmd.github.io/schema/cpd-report_1_0_0.xsd">
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Canvas.java"
+         totalNumberOfTokens="671"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Circle.java"
+         totalNumberOfTokens="397"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Ephemeral.java"
+         totalNumberOfTokens="61"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Fondo.java"
+         totalNumberOfTokens="638"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Lefty.java"
+         totalNumberOfTokens="107"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Rebel.java"
+         totalNumberOfTokens="65"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Rectangle.java"
+         totalNumberOfTokens="384"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Shy.java"
+         totalNumberOfTokens="53"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Skipper.java"
+         totalNumberOfTokens="87"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\SlotMachine.java"
+         totalNumberOfTokens="2265"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\SlotMachineContest.java"
+         totalNumberOfTokens="206"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Symbol.java"
+         totalNumberOfTokens="39"/>
+   <file path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Wheel.java"
+         totalNumberOfTokens="723"/>
+   <duplication lines="95" tokens="194">
+      <file begintoken="820"
+            column="5"
+            endcolumn="31"
+            endline="149"
+            endtoken="1013"
+            line="55"
+            path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Circle.java"/>
+      <file begintoken="2022"
+            column="5"
+            endcolumn="31"
+            endline="145"
+            endtoken="2215"
+            line="50"
+            path="C:\Users\salin\Downloads\SlotMachineMaven\SlotMachineMaven\src\main\java\Rectangle.java"/>
+      <codefragment><![CDATA[    }
+    
+    /**
+     * Move the circle a few pixels to the right.
+     */
+    public void moveRight(){
+        moveHorizontal(20);
+    }
+
+    /**
+     * Move the circle a few pixels to the left.
+     */
+    public void moveLeft(){
+        moveHorizontal(-20);
+    }
+
+    /**
+     * Move the circle a few pixels up.
+     */
+    public void moveUp(){
+        moveVertical(-20);
+    }
+
+    /**
+     * Move the circle a few pixels down.
+     */
+    public void moveDown(){
+        moveVertical(20);
+    }
+
+    /**
+     * Move the circle horizontally.
+     * @param distance the desired distance in pixels
+     */
+    public void moveHorizontal(int distance){
+        erase();
+        xPosition += distance;
+        draw();
+    }
+
+    /**
+     * Move the circle vertically.
+     * @param distance the desired distance in pixels
+     */
+    public void moveVertical(int distance){
+        erase();
+        yPosition += distance;
+        draw();
+    }
+
+    /**
+     * Slowly move the circle horizontally.
+     * @param distance the desired distance in pixels
+     */
+    public void slowMoveHorizontal(int distance){
+        int delta;
+
+        if(distance < 0) {
+            delta = -1;
+            distance = -distance;
+        } else {
+            delta = 1;
+        }
+
+        for(int i = 0; i < distance; i++){
+            xPosition += delta;
+            draw();
+        }
+    }
+
+    /**
+     * Slowly move the circle vertically
+     * @param distance the desired distance in pixels
+     */
+    public void slowMoveVertical(int distance){
+        int delta;
+
+        if(distance < 0) {
+            delta = -1;
+            distance = -distance;
+        }else {
+            delta = 1;
+        }
+
+        for(int i = 0; i < distance; i++){
+            yPosition += delta;
+            draw();
+        }
+    }
+
+    /**
+     * Change the size.
+     * @param newDiameter the new size (in pixels). Size must be >= 0.
+     */
+    public void changeSize(int newDiameter) {
+]]></codefragment>
+   </duplication>
+</pmd-cpd>

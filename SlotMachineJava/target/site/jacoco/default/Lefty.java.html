@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Lefty.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SlotMachine</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Lefty.java</span></div><h1>Lefty.java</h1><pre class="source lang-java linenums">import java.util.List;
+
+/**
+ * A wheel that copies the color of the wheel on its left when it spins.
+ * If there is no wheel on its left, it behaves like a normal wheel when a specific color
+ * is set, and it does not change when it spins.
+ *
+ * @author ForeroJ - SalinasS
+ */
+public class Lefty extends Wheel {
+
+    /**
+     * Create a new lefty wheel with a green frame.
+     * @param sharedSymbols the list of colors shared by all the wheels of the machine.
+     * @param sharedSymbolTypes the list of symbol types shared by all the wheels of the machine.
+     */
+    public Lefty(List&lt;String&gt; sharedSymbols, List&lt;String&gt; sharedSymbolTypes) {
+<span class="fc" id="L18">        super(sharedSymbols, sharedSymbolTypes);</span>
+<span class="fc" id="L19">        setFrameColor(&quot;green&quot;);</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * Copy the current color of the wheel on the left.
+     * Nothing happens if this wheel is locked or if there is no wheel on its left.
+     */
+    @Override
+    public void changeColorSymbol() {
+<span class="pc bpc" id="L28" title="1 of 4 branches missed.">        if (!isLocked() &amp;&amp; leftW != null) {</span>
+<span class="fc" id="L29">            changeSpecificColor(leftW.getActualColor());</span>
+        }
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Change the color of this wheel. If there is a wheel on the left and this wheel is not
+     * locked, the given color is ignored and the color of the left wheel is copied instead.
+     * @param color the new color, used only when there is no wheel on the left.
+     */
+    @Override
+    public void changeSpecificColor(String color) {
+<span class="pc bpc" id="L40" title="2 of 4 branches missed.">        if (!isLocked() &amp;&amp; leftW != null) {</span>
+<span class="fc" id="L41">            super.changeSpecificColor(leftW.getActualColor());</span>
+        } else {
+<span class="nc" id="L43">            super.changeSpecificColor(color);</span>
+        }
+<span class="fc" id="L45">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
